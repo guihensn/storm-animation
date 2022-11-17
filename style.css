@@ -1,0 +1,21 @@
+body{
+   background-color: rgb(17, 56, 82);
+   overflow: hidden;
+}
+#container { position: relative; }
+
+.canvas{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+h1{
+    position: absolute;
+    bottom: 0px;
+    margin: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(223, 30, 94);
+    padding: 20px;
+    font-family: 'Syne Mono', monospace;
+}
