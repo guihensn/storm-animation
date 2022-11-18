@@ -2,7 +2,7 @@ import { RainDropAnimator } from "./rainAnimator.js";
 const canvas = document.getElementById('rain');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-var audio = new Audio('sounds/mixkit-intense-rain-in-a-calm-night-1252.wav');
+const audio = new Audio('sounds/mixkit-intense-rain-in-a-calm-night-1252.wav');
 audio.volume = 0.2;
 audio.loop = true;
 let mousePosition = {
@@ -16,6 +16,13 @@ window.addEventListener('mousemove', (e) => {
 window.addEventListener('click', () => {
     audio.play();
 });
-const rainDropAnimator = new RainDropAnimator(canvas, mousePosition);
+let rainDropAnimator = new RainDropAnimator(canvas, mousePosition);
 rainDropAnimator.animate();
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    rainDropAnimator.finish();
+    rainDropAnimator = new RainDropAnimator(canvas, mousePosition);
+    rainDropAnimator.animate();
+});
 //# sourceMappingURL=rainEffect.js.map

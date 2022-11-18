@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thunder effect</title>
+    <title>Storm Animation</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
+    <img class="clouds" src="./clouds.jpg" alt="">
+    
     <div class="container">  
         <canvas class= "canvas" id="rain"></canvas>
         <canvas class= "canvas" id="thunder"></canvas>
     </div>
-    <script src="js/index.js" type="module"></script>
-  
-    <script src="js/rainEffect.js" type="module"></script>
+
+    <script src="js/thunder/thunderEffect.js" type="module"></script>
+    <script src="js/rain/rainEffect.js" type="module"></script>
+    
     <h1>Storm Animation</h1>
 </body>
 </html>
