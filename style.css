@@ -1,17 +1,20 @@
 body, html{
-   background-color: rgb(17, 56, 82);
-   overflow: hidden;
-
    width: 100vw;
    height: 100vh;
+   margin: 0;
 
-    margin: 0;
+   background-color: rgb(17, 56, 82);
+   
+   overflow: hidden;
 }
 
-#container { position: relative; }
+#container { 
+    position: relative; 
+}
 
 .canvas{
     position: absolute;
+
     width: 100vw;
     height: 100vh;
 
@@ -19,14 +22,17 @@ body, html{
 }
 
 h1{
+    z-index: 1;
     position: absolute;
     bottom: 0px;
-    margin: 10px;
+
     color: rgb(255, 255, 255);
-    background-color: rgb(223, 30, 94);
-    z-index: 1;
-    padding: 20px;
     font-family: 'Syne Mono', monospace;
+
+    margin: 10px;
+    padding: 20px;
+
+    background-color: rgb(223, 30, 94);
 }
 
 .clouds{
