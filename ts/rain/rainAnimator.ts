@@ -24,6 +24,19 @@ export class RainDropAnimator{
         }
     }
 
+    
+    slowSpeed(desaceleration: number, duration: number){
+        this.rainDrops.forEach(rainDrop => {
+            rainDrop.speed /= desaceleration;
+        });
+
+        setTimeout(() => {
+            this.rainDrops.forEach(rainDrop => {
+                rainDrop.speed *= desaceleration;
+            });
+        }, duration);
+    }
+
     animate(){
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         

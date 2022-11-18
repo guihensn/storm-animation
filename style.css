@@ -1,13 +1,21 @@
-body{
+body, html{
    background-color: rgb(17, 56, 82);
    overflow: hidden;
+
+   width: 100vw;
+   height: 100vh;
+
+    margin: 0;
 }
+
 #container { position: relative; }
 
 .canvas{
     position: absolute;
     width: 100vw;
     height: 100vh;
+
+    cursor: pointer;
 }
 
 h1{
@@ -16,18 +24,21 @@ h1{
     margin: 10px;
     color: rgb(255, 255, 255);
     background-color: rgb(223, 30, 94);
-    z-index: -1;
+    z-index: 1;
     padding: 20px;
     font-family: 'Syne Mono', monospace;
 }
 
 .clouds{
     position: absolute;
+
     width: 100vw;
     height: 100vh;
-    background-repeat: repeat-x;
+
     background-position: bottom;
-    background-size: 100%;
-    animation: move 60s linear infinite;
+    background-size: contain;
+
+    object-fit: cover;
+    
     opacity: 0.2;
 }

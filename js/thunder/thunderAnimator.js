@@ -36,7 +36,7 @@ export class ThunderAnimator {
     }
     drawColoring(intensity) {
         for (let i = 1; i < 10; i++) {
-            this.drawSimplePath(intensity * i * i, `rgba(30, 0, ${125 + Math.random() * 125}, ${1 / i})`);
+            this.drawSimplePath(intensity * i * i, `rgba(0, 0, ${125 + Math.random() * 125}, ${1 / i})`);
         }
     }
     drawSimplePath(lineWidth, color) {
